@@ -7,7 +7,7 @@ class List extends Component {
                 {this.props.items.map(item => {
                     return (
                         <li key={item.name}>
-                            {item.name} - {item.category}
+                            {item.name} - {item.type}
                         </li>
                     );
                 })}
