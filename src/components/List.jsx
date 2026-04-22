@@ -5,9 +5,11 @@ class List extends Component {
         return (
             <ul className="list">
                 {this.props.items.map(item => {
+                    const typeClass = item.type.toLowerCase();
                     return (
                         <li key={item.name}>
-                            {item.name} - {item.type}
+                            <span>{item.name}</span>
+                            <span className={`item-type ${typeClass}`}>{item.type}</span>
                         </li>
                     );
                 })}
